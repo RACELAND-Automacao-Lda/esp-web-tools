@@ -14,6 +14,8 @@ export const getChipFamilyName = (esploader: ESPLoader) => {
       return "ESP8266";
     case CHIP_FAMILY_ESP32S2:
       return "ESP32-S2";
+    case CHIP_FAMILY_ESP32C3:
+      return "ESP32-C3";
     default:
       return "Unknown Chip";
   }
