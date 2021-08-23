@@ -96,7 +96,7 @@ A `state-changed` event contains the following information:
 | message    | A description of the current state                                                                                     |
 | manifest   | The loaded manifest                                                                                                    |
 | build      | The manifest's build that was selected                                                                                 |
-| chipFamily | The chip that was detected;&nbsp;"ESP32" \| "ESP8266" \| "ESP32-S2" \| "ESP32-C3" \|"Unknown Chip"                     |
+| chipFamily | The chip that was detected;&nbsp;"ESP32" \| "ESP8266" \| "ESP32-S2" \| "ESP32-C3" \| "Unknown Chip"                     |
 | details    | An optional extra field that is different [per state](https://github.com/esphome/esp-web-tools/blob/main/src/const.ts) |
 
 ## Development
