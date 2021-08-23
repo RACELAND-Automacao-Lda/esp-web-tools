@@ -26,9 +26,7 @@ Manifest definition:
     },
     {
       "chipFamily": "ESP8266",
-      "parts": [
-        { "path": "esp8266.bin", "offset": 0 },
-      ]
+      "parts": [{ "path": "esp8266.bin", "offset": 0 }]
     }
   ]
 }
@@ -51,18 +49,18 @@ All attributes can also be set via properties (`manifest`, `eraseFirst`)
 
 The following attributes are automatically added to `<esp-web-install-button>` and can be used for styling:
 
-| Attribute | Description |
-| -- | -- |
-| `install-supported` | Added if installing firmware is supported
-| `install-unsupported` | Added if installing firmware is not supported
-| `active` | Added when flashing is active
+| Attribute             | Description                                   |
+| --------------------- | --------------------------------------------- |
+| `install-supported`   | Added if installing firmware is supported     |
+| `install-unsupported` | Added if installing firmware is not supported |
+| `active`              | Added when flashing is active                 |
 
 You can add the following attributes or properties to change the UI elements:
 
-| Attribute | Property | Description |
-| -- | -- | -- |
-| `show-log` | `showLog` | Show a log style view of the progress instead of a progress bar
-| `hide-progress` | `hideProgress` | Hides all progress UI elements
+| Attribute       | Property       | Description                                                     |
+| --------------- | -------------- | --------------------------------------------------------------- |
+| `show-log`      | `showLog`      | Show a log style view of the progress instead of a progress bar |
+| `hide-progress` | `hideProgress` | Hides all progress UI elements                                  |
 
 ### CSS custom properties (variables)
 
@@ -80,11 +78,11 @@ The following variables can be used to change the colors of the default UI eleme
 
 The following slots are available:
 
-| Slot name | Description |
-| -- | -- |
-| `activate` | Button to start the flash progress
-| `unsupported` | Message to show when the browser is not supported
-| `not-allowed` | Message to show when not a secure context
+| Slot name     | Description                                       |
+| ------------- | ------------------------------------------------- |
+| `activate`    | Button to start the flash progress                |
+| `unsupported` | Message to show when the browser is not supported |
+| `not-allowed` | Message to show when not a secure context         |
 
 ## Events
 
@@ -92,14 +90,14 @@ When the state of flashing changes, a `state-changed` event is fired.
 
 A `state-changed` event contains the following information:
 
-Field | Description
--- | --
-state | The current [state](https://github.com/esphome/esp-web-tools/blob/main/src/const.ts)
-message | A description of the current state
-manifest | The loaded manifest
-build | The manifest's build that was selected 
-chipFamily | The chip that was detected;&nbsp;"ESP32" \| "ESP8266" \| "ESP32-S2" \| "Unknown Chip"
-details | An optional extra field that is different [per state](https://github.com/esphome/esp-web-tools/blob/main/src/const.ts)
+| Field      | Description                                                                                                            |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------- |
+| state      | The current [state](https://github.com/esphome/esp-web-tools/blob/main/src/const.ts)                                   |
+| message    | A description of the current state                                                                                     |
+| manifest   | The loaded manifest                                                                                                    |
+| build      | The manifest's build that was selected                                                                                 |
+| chipFamily | The chip that was detected;&nbsp;"ESP32" \| "ESP8266" \| "ESP32-S2" \| "ESP32-C3" \|"Unknown Chip"                     |
+| details    | An optional extra field that is different [per state](https://github.com/esphome/esp-web-tools/blob/main/src/const.ts) |
 
 ## Development
 
